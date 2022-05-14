@@ -1,0 +1,8 @@
+<button class="button" (click)="add()">+</button>
+<i *ngIf="!editing; else nameEditor" class="fa fa-folder-open" (click)="startEditing()">{{org.name}}</i>
+<ng-template #nameEditor>
+  <input [(ngModel)]="newName" (keyup.enter)="save()" (blur)="save()" />
+</ng-template>
+<ul>
+  <li *ngFor="let subOrg of org.nodes" app-node [org]="subOrg"></li>
+</ul>
