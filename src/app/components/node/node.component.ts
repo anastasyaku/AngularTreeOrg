@@ -14,7 +14,7 @@ export class NodeComponent {
   constructor(private orgTreeService: OrgTreeService) {}
 
   add() {
-    this.orgTreeService.addOrg('(Безымянный)', this.org);
+    this.orgTreeService.addOrg('(Изменить имя)', this.org);
   }
 
   startEditing() {
